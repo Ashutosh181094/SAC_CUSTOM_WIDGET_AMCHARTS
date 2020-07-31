@@ -1,8 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-      <style>
-      </style>
+      <h1>Hello World</h1>
     `;
 
     customElements.define('com-sap-sample-template', class WidgetTemplate extends HTMLElement {
