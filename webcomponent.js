@@ -160,7 +160,7 @@ constructor() {
 
        var axis2 = chart.xAxes.push(new am4charts.ValueAxis());
        axis2.min = 0;
-       axis2.max = 240;
+       axis2.max = 100;
        axis2.strictMinMax = true;
        axis2.renderer.line.strokeOpacity = 1;
        axis2.renderer.line.strokeWidth = 5;
