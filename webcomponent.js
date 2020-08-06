@@ -32,7 +32,7 @@
     <style>
     #chartdiv {
             width: 100%;
-            height:500px;
+            height:250px;
     }
     </style>
     <div id="chartdiv"></div>
@@ -190,9 +190,9 @@ constructor() {
        hand2.startWidth = 10;
 
       setInterval(function() {
-      hand.showValue(20/100 * 160, 1000, am4core.ease.cubicOut);
+      hand.showValue(20/100 * 100, 1000, am4core.ease.cubicOut);
       label.text = Math.round(hand.value).toString();
-      hand2.showValue(40/100 * 160, 1000, am4core.ease.cubicOut);
+      hand2.showValue(40/100 * 100, 1000, am4core.ease.cubicOut);
       label2.text = Math.round(hand2.value).toString();
       }, 5000);
 
@@ -202,10 +202,10 @@ constructor() {
       legend.verticalCenter = "bottom";
       legend.parent = chart.chartContainer;
       legend.data = [{
-      "name": "Measurement #1",
+      "name": "Actual Sales",
       "fill": chart.colors.getIndex(0)
       }, {
-      "name": "Measurement #2",
+      "name": "Targeted Sales",
       "fill": chart.colors.getIndex(3)
        }];
 
