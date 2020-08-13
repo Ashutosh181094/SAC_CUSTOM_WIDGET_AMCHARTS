@@ -172,7 +172,7 @@
       return this.achieved;
     }
 
-    /*
+    
 
     set target(value) {
       this.target = value;
@@ -185,7 +185,7 @@
     }
 
     
-*/
+
 
 
 
