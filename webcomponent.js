@@ -77,6 +77,8 @@
       });
       shadowRoot.appendChild(template.content.cloneNode(true));
       this._firstConnection = false;
+      this.target=0;
+      this.achieved=0;
 
 
 
@@ -160,14 +162,25 @@
     */
 
 
-    get chartType() {
-      return this.chartTypeValue;
+   
+    
+     get target() {
+      return this.target;
     }
 
-    set chartType(value) {
-      this.chartTypeValue = value;
+    set target(value) {
+      this.target = value;
+    }
+    
+     get achieved() {
+      return this.achieved;
     }
 
+    set achieved(value) {
+      this.achieved = value;
+    }
+
+    
 
 
 
@@ -242,9 +255,9 @@
       hand2.startWidth = 10;
 
       setInterval(function() {
-        hand.showValue(20 / 100 * 160, 1000, am4core.ease.cubicOut);
+        hand.showValue(this.achieved / 100, 1000, am4core.ease.cubicOut);
         label.text = Math.round(hand.value).toString();
-        hand2.showValue(40 / 100 * 160, 1000, am4core.ease.cubicOut);
+        hand2.showValue(this.target / 100, 1000, am4core.ease.cubicOut);
         label2.text = Math.round(hand2.value).toString();
       }, 5000);
 
