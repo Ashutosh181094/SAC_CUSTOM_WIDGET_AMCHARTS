@@ -164,23 +164,23 @@
 
   
     
-     get target() {
+     get Target() {
       return this.target;
     }
     
-     get achieved() {
+     get Achieved() {
       return this.achieved;
     }
 
     
 
-    set target(value) {
+    set Target(value) {
       this.target = value;
     }
     
     
 
-    set achieved(value) {
+    set Achieved(value) {
       this.achieved = value;
     }
 
