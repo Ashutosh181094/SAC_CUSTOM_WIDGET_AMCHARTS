@@ -255,9 +255,9 @@
       hand2.startWidth = 10;
 
       setInterval(function() {
-        hand.showValue(this.achieved / 100, 1000, am4core.ease.cubicOut);
+        hand.showValue(this.achieved, 1000, am4core.ease.cubicOut);
         label.text = Math.round(hand.value).toString();
-        hand2.showValue(this.target / 100, 1000, am4core.ease.cubicOut);
+        hand2.showValue(this.target, 1000, am4core.ease.cubicOut);
         label2.text = Math.round(hand2.value).toString();
       }, 5000);
 
