@@ -162,19 +162,23 @@
     */
 
 
-  /* 
+  
     
      get target() {
       return this.target;
-    }
-
-    set target(value) {
-      this.target = value;
     }
     
      get achieved() {
       return this.achieved;
     }
+
+    /*
+
+    set target(value) {
+      this.target = value;
+    }
+    
+    
 
     set achieved(value) {
       this.achieved = value;
@@ -188,6 +192,8 @@
     redraw() {
       let myChart = this.shadowRoot.getElementById('chartdiv');
       let legendContainer=this.shadowRoot.getElementById('legendContainer');
+      var targetValue=this.target;
+      var achievedValue=this.achieved;
       console.log("Step-11");
 
 
@@ -255,9 +261,9 @@
       hand2.startWidth = 10;
 
       setInterval(function() {
-        hand.showValue(this.achieved, 1000, am4core.ease.cubicOut);
+        hand.showValue(achievedValue, 1000, am4core.ease.cubicOut);
         label.text = Math.round(hand.value).toString();
-        hand2.showValue(this.target, 1000, am4core.ease.cubicOut);
+        hand2.showValue(targetValue, 1000, am4core.ease.cubicOut);
         label2.text = Math.round(hand2.value).toString();
       }, 5000);
 
